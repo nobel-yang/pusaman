@@ -1,0 +1,11 @@
+[
+  { "labelId": 1, "labelName": "MySQL" },
+  { "labelId": 2, "labelName": "Redis" },
+  { "labelId": 3, "labelName": "Kafka" },
+  { "labelId": 4, "labelName": "分布式" },
+  { "labelId": 5, "labelName": "DDD" },
+  { "labelId": 6, "labelName": "JVM" },
+  { "labelId": 7, "labelName": "Java基础" },
+  { "labelId": 8, "labelName": "AI" },
+  { "labelId": 10, "labelName": "系统设计" }
+]

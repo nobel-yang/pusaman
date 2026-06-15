@@ -142,6 +142,7 @@ body {
   padding: 20px 24px;
   border: 1px solid #e8e8e8;
   margin-bottom: 12px;
+  min-height: 80px;
 }
 
 /* Chip */

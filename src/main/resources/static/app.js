@@ -31,7 +31,7 @@ function resetQuizView() {
   answerInput.value = '';
   answerContent.innerHTML = '';
   answerArea.classList.add('hidden');
-  questionCard.innerHTML = '';
+  // 不清空题目卡片，保留当前题目直到新题目加载完成，避免页面抖动
   btnSubmit.disabled = true;
   btnNext.disabled = false;
 }
@@ -133,7 +133,7 @@ btnStart.addEventListener('click', () => {
 
 // Task 5: 题目加载
 async function loadQuestion() {
-  questionCard.innerHTML = '<span style="color:#aaa;font-size:14px">加载中...</span>';
+  // 不提前清空题目，保留旧题目直到新题目加载完成，避免页面抖动
   btnNext.disabled = true;
   btnSubmit.disabled = true;
   try {

@@ -3,6 +3,7 @@ package com.lab.ai.pusaman.service;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.lab.ai.pusaman.entity.ProblemCache;
+import jakarta.annotation.PreDestroy;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
@@ -34,6 +35,7 @@ public class CacheService {
     }
 
     @Scheduled(fixedRate = 60 * 1000)
+    @PreDestroy
     public void persistToFile() {
         try {
             Path path = Path.of(filePath);

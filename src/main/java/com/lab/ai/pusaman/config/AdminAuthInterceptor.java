@@ -3,9 +3,10 @@ package com.lab.ai.pusaman.config;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
-import org.jetbrains.annotations.NotNull;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
+
+import javax.validation.constraints.NotNull;
 
 @Slf4j
 @Component
@@ -42,6 +43,11 @@ public class AdminAuthInterceptor implements HandlerInterceptor {
     }
 
     protected String getAdminToken() {
-        return System.getProperty("ADMIN_TOKEN");
+        String name = "ADMIN_TOKEN";
+        String value = System.getProperty(name);
+        if (value == null) {
+            value = System.getenv(name);
+        }
+        return value;
     }
 }

@@ -3,7 +3,8 @@
 ## 📖 1. 概述
 
 [Pusaman](https://pusaman.xyz) 是一个基于 AI 的知识复习应用。用户选择知识标签后，系统随机推送不重复的题目；用户作答后，系统通过 RAG（检索增强生成）检索相关知识文档，调用大语言模型对用户答案进行评判并给出参考答案，整个过程以 SSE 流式输出，实时展示评判结果。
-<img width="1828" height="1740" alt="pusaman" src="https://github.com/user-attachments/assets/e8f0f6ad-8c09-45cb-8922-51d94f0c532f" />
+<img width="1828" height="1740" alt="pusaman" src="https://github.com/user-attachments/assets/d23f46db-d06c-4237-8c6f-94a0f8cb0bce" />
+
 
 🛠️ **技术栈：**
 

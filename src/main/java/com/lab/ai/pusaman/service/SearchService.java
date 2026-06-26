@@ -26,7 +26,7 @@ public class SearchService {
         SearchRequest request = SearchRequest.builder()
                 .query(question)
                 .topK(5)
-                .similarityThreshold(0.07)
+                .similarityThreshold(0.5)
                 .build();
         List<Document> documents = vectorStore.similaritySearch(request);
         log.info("Vector store search result size:{}", documents.size());

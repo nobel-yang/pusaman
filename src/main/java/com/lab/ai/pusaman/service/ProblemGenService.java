@@ -4,11 +4,7 @@ import com.lab.ai.pusaman.entity.ProblemCache;
 import com.lab.ai.pusaman.util.Md5Utils;
 import org.springframework.stereotype.Service;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Random;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
@@ -32,14 +28,15 @@ public class ProblemGenService {
     }
 
     private String doGenNextProblem(List<String> problems, Set<String> visitedProblems) {
-        int idx = new Random().nextInt(problems.size());
-        String problem = problems.get(idx);
-        String problemHash = Md5Utils.encrypt(problem);
-        if (visitedProblems.contains(problemHash)) {
-            return doGenNextProblem(problems, visitedProblems);
+        Random random = new Random();
+        for(;;) {
+            int idx = random.nextInt(problems.size());
+            String problem = problems.get(idx);
+            String problemHash = Md5Utils.encrypt(problem);
+            if (!visitedProblems.contains(problemHash)) {
+                visitedProblems.add(problemHash);
+                return problem;
+            }
         }
-
-        visitedProblems.add(problemHash);
-        return problem;
     }
 }

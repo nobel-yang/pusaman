@@ -1,11 +1,12 @@
 [
-  { "labelId": 1, "labelName": "MySQL" },
-  { "labelId": 2, "labelName": "Redis" },
-  { "labelId": 3, "labelName": "Kafka" },
-  { "labelId": 4, "labelName": "分布式" },
-  { "labelId": 5, "labelName": "DDD" },
-  { "labelId": 6, "labelName": "JVM" },
-  { "labelId": 7, "labelName": "Java基础" },
-  { "labelId": 8, "labelName": "AI" },
-  { "labelId": 10, "labelName": "系统设计" }
+  { "labelId": 1, "labelName": "教育与青年发展 (Education & Youth)" },
+  { "labelId": 2, "labelName": "科技与现代生活 (Technology & Modern Life)" },
+  { "labelId": 3, "labelName": "环境保护与能源 (Environment & Energy)" },
+  { "labelId": 4, "labelName": "大众健康与运动 (Health & Sports)" },
+  { "labelId": 5, "labelName": "传统文化与旅游 (Culture, Heritage & Tourism)" },
+  { "labelId": 6, "labelName": "城市化与交通 (Urbanization & Transportation)" },
+  { "labelId": 7, "labelName": "职场、经济与男女平等 (Work, Economy & Gender)" },
+  { "labelId": 8, "labelName": "媒体、广告与名人效应 (Media, Advertising & Celebrity)" },
+  { "labelId": 9, "labelName": "政府、法律与社会犯罪 (Government, Law & Crime)" },
+  { "labelId": 10, "labelName": "全球化、移民与国际社会 (Globalization & Society)" }
 ]

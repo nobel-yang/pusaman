@@ -21,7 +21,8 @@ public class RagConfig {
     public ChatClient chatClient(ChatModel chatModel,
                                  ChatMemory chatMemory) {
         return ChatClient.builder(chatModel)
-                .defaultSystem("你是一个专业评委，要根据给出的参考资料，评价用户的问题。" +
+                .defaultSystem("你是一个专业的英语老师，现在在对用户的中译英做评价，要根据给出的参考资料，评价用户的答案。" +
+                        "只能使用参考资料中的答案作为参考答案，如果参考资料中没有，回答给用户**没有找到可参考的资料**，严禁自行翻译。" +
                         "如果用户回答不完全，指出差距在哪里，并给出参考答案。" +
                         "返回结果要求是一个标准的json格式，其中有两个字段，分别为j和r，对应「评价」和「参考答案」。不要有其他任何多余文本。" +
                         "比如，" +
